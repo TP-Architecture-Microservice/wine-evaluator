@@ -20,8 +20,7 @@ class ModelCommandHandler:
     def onRetrainModel(self) -> ModelRetrained:
         model = self.model.retrain()
         self.model_repository.persist(model)
-        self.model = model
-        return ModelRetrained
+        return ModelRetrained(model)
 
     def onModelCommand(self, command: ModelCommand) -> ModelEvent:
         match command:
