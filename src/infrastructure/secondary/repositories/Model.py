@@ -12,3 +12,9 @@ class CSVModelRepository(ModelRepository):
 
     def add_entry(self, wine_with_quality: WineWithQuality):
         pass
+
+    def read_csv(self):
+        wine_data = pd.read_csv('../../../../Wines.csv')
+        wine_data = wine_data.drop('Unnamed: 13', axis=1)
+        wine_data = wine_data.drop('Id', axis=1)
+        return wine_data
