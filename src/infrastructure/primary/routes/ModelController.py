@@ -39,7 +39,6 @@ class ModelController:
             model=self.model_repository.load()
         )
 
-
     @router.get("/")
     async def get_model(self):
         return self.model_command_handler.model.serialize()
@@ -68,7 +67,6 @@ class ModelController:
             )
         ))
         return event.wine
-
 
     @router.post("/retrain")
     async def retrain_model(self):
