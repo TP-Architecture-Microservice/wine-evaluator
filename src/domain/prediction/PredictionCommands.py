@@ -9,6 +9,8 @@ class PredictQualityForWine:
     wine: Wine
 
 
-PredictBestWine = object
+class PredictBestWine:
+    pass
+
 
 PredictionCommand = Union[PredictBestWine, PredictQualityForWine]

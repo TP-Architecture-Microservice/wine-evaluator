@@ -12,3 +12,6 @@ class CSVModelRepository(ModelRepository):
 
     def add_entry(self, wine_with_quality: WineWithQuality):
         pass
+
+    def load(self) -> BaseAIModel:
+        pass

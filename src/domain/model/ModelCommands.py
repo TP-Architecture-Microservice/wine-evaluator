@@ -10,6 +10,9 @@ class AddWineToTrainingData:
     quality: WineQuality
 
 
-RetrainModel = object
+@dataclass(frozen=True)
+class RetrainModel:
+    pass
+
 
 ModelCommand = Union[AddWineToTrainingData, RetrainModel]
